@@ -1,0 +1,288 @@
+/* Resetear los márgenes y el relleno para eliminar el espaciado predeterminado */
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #73290e;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2ca52;
+  color: white;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.buttons {
+  display: flex;
+
+}
+
+button {
+  background: none;
+  border: none;
+  margin-right: 10px;
+}
+
+nav {
+  background-color: #f2ca52;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Estilos para el menú desplegable */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  padding: 10px;
+}
+
+nav ul li:hover .submenu {
+  display: block;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 20px;
+  }
+
+  buttons button img {
+      width: 20px;
+      width: 100px; 
+      height: 100px;
+  }
+
+  nav ul {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+}
+
+/* Estilos para los juegos */
+.game {
+  margin: 5px;
+  text-align: center;
+}
+
+.game img {
+  max-width: 1500px; /* Aumenta el valor para hacer la imagen más ancha */
+  height: 10;
+  display: block;
+  margin: 0 auto;
+}
+
+.game .game-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.game h2 {
+  font-size: 24px;
+  margin: 0;
+  width: 600px; /* Elimina el margen predeterminado */
+  text-align: center;
+  color: white;
+}
+
+.game p {
+  font-size: 18px;
+  color: #666; /* Elimina el margen predeterminado */
+  margin: 0;
+  width: 600px; /* Elimina el margen predeterminado */
+  text-align: center;
+  color: white;
+}
+
+.game button {
+  background-color:#F29A2E;
+  color: white;
+  padding: 10px 20px;
+  border: black 5px solid;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.content {
+  background-color: #73290e;
+  padding: 20px;
+}
+
+
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #73290e;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.contact-info {
+  margin: 20px 0;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-media {
+  margin: 20px 0;
+}
+
+.social-media a {
+  margin: 0 10px;
+}
+
+.social-media img {
+  width: 30px;
+}
+
+.copyright {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.footer-links {
+  margin: 5px 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column; /* Alinea los enlaces en vertical */
+  align-items: center; /* Centra los enlaces verticalmente */
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 5px 0; /* Espacio entre los enlaces */
+}
+
+
+/* Estilos responsivos para los juegos */
+@media (max-width: 768px) {
+  .game img {
+      width: 100%;
+  }
+}
+/*Pagina de los Juegos*/
+.game-cover img {
+  width: calc(100% - 40px);
+  margin: 5px 20px 0 20px;
+}
+
+.game-info {
+  margin: 5px 20px;
+  display: flex;
+  align-items: left;
+}
+
+.buy-button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.left-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.game-description {
+  margin: 20px;
+  text-align: left;
+}
+
+/*Pagina de Mercha*/
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+}
+.product {
+  flex: 0 0 calc(33.33% - 20px); /* Tamaño de columna del 33.33% con espacio entre ellas */
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.product img {
+  max-width: 100%;
+}
+.product button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+body:has(#darkModeSwitch:checked) {
+/* Estilos para el modo oscuro */
+background-color: black;
+color: white;
+}
+
+.dark-mode-switch {
+position: absolute;
+top: 10px;
+right: 10px;
+}
